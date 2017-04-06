@@ -1,0 +1,200 @@
+<canvas id="sl_classification" width="100" height="100"></canvas>
+
+<!--/ Chart.js -->
+<script>
+
+var classification = document.getElementById("sl_classification");
+
+var data = {
+    datasets: [
+        {
+            label: 'Non-Malignant Tumor',
+            data: [
+                {
+                    x: 1,
+                    y: 2,
+                    r: 7
+                },
+                {
+                    x: 3,
+                    y: 10,
+                    r: 7
+                },
+                {
+                    x: 22,
+                    y: 31,
+                    r: 7
+                },
+                {
+                    x: 41,
+                    y: 23,
+                    r: 7
+                },
+                                                {
+                    x: 45,
+                    y: 40,
+                    r: 7
+                },
+                {
+                    x: 48,
+                    y: 34,
+                    r: 7
+                },
+                {
+                    x: 39,
+                    y: 72,
+                    r: 7
+                },
+                {
+                    x: 34,
+                    y: 24,
+                    r: 7
+                },
+                                                {
+                    x: 30,
+                    y: 24,
+                    r: 7
+                },
+                {
+                    x: 12,
+                    y: 10,
+                    r: 7
+                },
+                {
+                    x: 20,
+                    y: 30,
+                    r: 7
+                },
+                {
+                    x: 40,
+                    y: 10,
+                    r: 7
+                },                
+            ],
+            backgroundColor:"#FF6384",
+            hoverBackgroundColor: "#FF6384",
+            footer:'H'
+        },
+        {
+            label: 'Malignant Tumor',
+            data: [
+                {
+                    x: 65,
+                    y: 78,
+                    r: 7
+                },
+                {
+                    x: 40,
+                    y: 32,
+                    r: 7
+                },
+                {
+                    x: 52,
+                    y: 51,
+                    r: 7
+                },
+                {
+                    x: 55,
+                    y: 60,
+                    r: 7
+                },
+                                                {
+                    x: 60,
+                    y: 67,
+                    r: 7
+                },
+                {
+                    x: 67,
+                    y: 76,
+                    r: 7
+                },
+                {
+                    x: 78,
+                    y: 72,
+                    r: 7
+                },
+                {
+                    x: 86,
+                    y: 64,
+                    r: 7
+                },
+                                                {
+                    x: 99,
+                    y: 99,
+                    r: 7
+                },
+                {
+                    x: 76,
+                    y: 54,
+                    r: 7
+                },
+                {
+                    x: 86,
+                    y: 67,
+                    r: 7
+                },
+                {
+                    x: 65,
+                    y: 65,
+                    r: 7
+                },                
+            ],
+            backgroundColor:"#FF0000",
+            hoverBackgroundColor: "#00FF00",
+        },
+        {
+            label: 'Case to Predict (Non-Malignant)',
+            data: [
+                {
+                    x: 36,
+                    y: 25,
+                    r: 10
+                }],
+            backgroundColor:"#0000FF",
+            hoverBackgroundColor: "#00000FF",
+        },  {
+               		label: "Classification Line",
+                    type:'line',
+                    data: [
+                    	{
+                    	x:100,
+                    	y:0
+                    	},
+                    	{
+                    	x:0,
+                    	y:100
+                    	}
+                    ],
+                    fill: false,
+                    borderColor: '#EC932F',
+                    backgroundColor: '#EC932F',
+            }]
+};
+
+
+var myBubbleChart = new Chart(classification,{
+    type: 'bubble',
+    data: data,
+    options: {
+        elements: {
+            points: {
+                borderWidth: 1,
+                borderColor: 'rgb(0, 0, 0)'
+            }
+        },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }],
+            xAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]   
+        } ,
+    }
+});
+</script>
+ 

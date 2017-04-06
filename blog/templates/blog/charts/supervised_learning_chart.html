@@ -1,0 +1,101 @@
+<canvas id="sl_regression" width="100" height="100"></canvas>
+
+<!--/ Chart.js -->
+<script>
+var ctx = document.getElementById("sl_regression");
+var scatterChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        datasets: [{
+            fill: false,
+            steppedLine:true,
+            borderColor: "rgba(75,192,192,1)",
+            label: 'X: House Size | Y: Cost of House',
+            data: [{
+                x: 0,
+                y: 100
+            }, {
+                x: 10,
+                y: 0
+            }]
+        },
+            {
+
+                type: 'line',
+                label: 'House COST at a specific SIZE',
+                borderColor: "rgba(0,0,0,1)",
+            data: [{
+                x: 0,
+                y: 0
+            }, {
+                x: 5,
+                y: 25
+            },
+            {
+                x: 12,
+                y: 144
+            }, {
+                x: 15,
+                y: 225
+            },{
+                x: 20,
+                y: 400
+            }]
+            },
+            {
+
+                type: 'bubble',
+                label: 'Data Points',
+                borderColor: "rgba(0,0,0,1)",
+            data: [{
+                x: 0,
+                y: 0
+            }, {
+                x: 4,
+                y: 12
+            },
+            {
+                x: 6,
+                y: 40
+            }, {
+                x: 8,
+                y: 70
+            },{
+                x: 9,
+                y: 75
+            },{
+                x: 10,
+                y: 110
+            }, {
+                x: 12,
+                y: 140
+            },
+            {
+                x: 14,
+                y: 210
+            }, {
+                x: 17,
+                y: 270
+            },{
+                x: 20,
+                y: 410
+            }],
+            backgroundColor:"#FF6384",
+            hoverBackgroundColor: "#FF6384",
+            }
+
+        ]
+    },
+    options: {
+        scales: {
+            xAxes: [{
+                type: 'linear',
+                position: 'bottom',
+
+            }]
+        }
+    }
+});
+</script>
+
+<!-- Chart.js /-->
